@@ -1,0 +1,41 @@
+
+@model IEnumerable<Employee>
+
+
+<a class="btn btn-success" href="~/Emp/Create" role="button">Yeni Personel</a>
+<br>
+
+
+
+<table class="table table-hover">
+
+<thead>
+    <tr> 
+        <th>Adı </th>
+        <th>Soyadı </th>
+        <th>Ünvanı </th>
+        <th>İşlem</th>
+
+    </tr>
+</thead>
+<tbody>
+@foreach(var emp in Model)
+{
+<tr>
+    <td>@emp.FirstName </td>
+    <td> @emp.LastName</td>
+    <td>@emp.Title </td>
+    <td>
+        <a class="btn btn-danger" href="~/Emp/Delete/@emp.EmployeeId" role="button">Sil</a>
+        <a class="btn btn-primary" href="~/Emp/Edit/@emp.EmployeeId" role="button">Düzenle</a>
+        <a class="btn btn-success" href="~/Emp/Detail/@emp.EmployeeId" role="button">Detay</a>
+    </td>
+ 
+</tr>
+}
+
+</tbody>
+
+</table>
+
+

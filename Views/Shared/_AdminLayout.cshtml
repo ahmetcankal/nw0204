@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - p0204</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/p0204.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <partial name="_header"></partial>
+
+    <div class="container">
+     
+     <div class="row">
+
+        <div class="col-md-3"> 
+            <partial name="_sidebar"></partial>
+
+        </div>
+
+        <div class="col-md-9"> @RenderBody()</div>
+     </div>
+          
+    </div>
+    
+    <partial name="_footer"></partial>
+
+   
+</body>
+</html>
